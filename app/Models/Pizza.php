@@ -9,8 +9,9 @@ class Pizza extends Model
 {
     use HasFactory;
 
-    protected $casts = [
-        'toppings' => 'array'
-    ];
+    public function toppings()
+    {
+        return $this->belongsToMany(Topping::class);
+    }
 
 }

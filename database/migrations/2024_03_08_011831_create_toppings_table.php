@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pizzas', function (Blueprint $table) {
+        Schema::create('toppings', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->string('type');
-            $table->string('base');
             $table->string('name');
-            $table->json('toppings')->nullable();
+            $table->text('description')->nullable();
+            $table->boolean('is_available')->default(true); // Indicates if the topping is available for use
+            $table->timestamps();
         });
     }
 
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pizzas');
+        Schema::dropIfExists('toppings');
     }
 };

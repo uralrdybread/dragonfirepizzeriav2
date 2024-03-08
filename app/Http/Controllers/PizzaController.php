@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pizza;
+use App\Models\Topping;
 
 class PizzaController extends Controller
 {
@@ -17,32 +18,32 @@ class PizzaController extends Controller
         ]);
     }
 
-    public function show($id){
+    public function show($id)
+        {
+    $pizza = Pizza::findOrFail($id);
+    $toppings = $pizza->toppings()->get(); // Retrieve the toppings associated with the pizza
 
-        $pizza = Pizza::findorFail($id);
+    return view('pizzas.show', compact('pizza', 'toppings'));
+        }
 
-        return view('pizzas.show', ['pizza' => $pizza]);
+    public function create()
+    {
+    $toppings = Topping::all();
+    return view('pizzas.create', compact('toppings'));
     }
 
-    public function create() {
-        return view('pizzas.create');
-    }
+    public function store(Request $request) {
+    $pizza = new Pizza();
+    $pizza->name = $request->input('name');
+    $pizza->type = $request->input('type');
+    $pizza->base = $request->input('base');
+    $pizza->save();
 
-    public function store() {
+    $toppingIds = $request->input('toppings', []);
+    $pizza->toppings()->attach($toppingIds);
 
-        $pizza = new Pizza();
-
-        $pizza->name=request('name');
-        $pizza->type=request('type');
-        $pizza->base=request('base');
-        $pizza->toppings=request('toppings');
-
-    //   return request('toppings');
-
-        $pizza->save();
-
-        return redirect('/')->with('mssg', 'Thanks for your order!');
-    }
+    return redirect('/')->with('mssg', 'Thanks for your order!');
+}
 
     public function destroy($id) {
         $pizza = Pizza::findorFail($id);

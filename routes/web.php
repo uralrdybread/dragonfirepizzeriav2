@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PizzaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserRoleController;
+use App\Http\Controllers\ToppingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,8 +21,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+// need to figure out why resource isn't working some of these
+Route::delete('/pizzas/{id}', [PizzaController::class, 'destroy']);
+Route::post('/pizzas', [PizzaController::class, 'store']);
 Route::get('pizzas/create', [PizzaController::class, 'create']);
 Route::resource('pizzas', PizzaController::class)->only(['index', 'show'])->middleware('admin');
+
+// toppings controller
+Route::get('/toppings', [ToppingController::class, 'index']);
 
 // Dashboard route (requires authentication and email verification)
 Route::get('/dashboard', function () {
