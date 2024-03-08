@@ -12,7 +12,7 @@
                     {{ __("You're logged in!") }}
                 </div>
                 <p><a href="/pizzas">View All Pizza Orders</a></p>
-                <a href="{{ route('users.assign-role', ['user' => $user->id]) }}">Assign Role</a>
+                
             </div>
         </div>
     </div>

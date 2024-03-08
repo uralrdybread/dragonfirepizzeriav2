@@ -20,10 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('pizzas', PizzaController::class);
-
-Route::put('users/{user}/assign-role', [UserController::class, 'assignRole'])->name('users.assign-role');
-
+Route::get('pizzas/create', [PizzaController::class, 'create']);
+Route::resource('pizzas', PizzaController::class)->only(['index', 'show'])->middleware('admin');
 
 // Dashboard route (requires authentication and email verification)
 Route::get('/dashboard', function () {
