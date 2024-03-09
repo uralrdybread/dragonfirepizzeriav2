@@ -1,20 +1,19 @@
 <x-layout>
-    <div>
+    <div class="pizza-details">
         <h1>Order for {{ $pizza->name }}</h1>
-        <p>Type - {{ $pizza->type }}</p>
-        <p>Base - {{ $pizza->base }}</p>
-        <p>Extra Toppings:</p>
+        <p><strong>Type:</strong> {{ $pizza->type }}</p>
+        <p><strong>Base:</strong> {{ $pizza->base }}</p>
+        <p><strong>Extra Toppings:</strong></p>
         <ul>
             @foreach($toppings as $topping)
                 <li>{{ $topping->name }}</li>
             @endforeach
-
         </ul>
-        <form action="/pizzas/{{$pizza->id}}" method="POST">
+        <form action="/pizzas/{{$pizza->id}}" method="POST" class="delete-form">
             @csrf
             @method('DELETE')
-            <button>Complete Order</button>
+            <button class="btn-complete">Complete Order</button>
         </form>
     </div>
-    <a href="/pizzas"><- Back to all pizzas</a>
+    <a href="/pizzas" class="back-link"><- Back to all pizzas</a>
 </x-layout>

@@ -6,18 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 </head>
-<nav>
-    <div class="container">
-        <div class="logo">
-            <a href="{{ url('/') }}">Your Site Name</a>
+<body>
+    <header class="navbar">
+        <div class="left"><img src="\images\flamepizzalogo.png" class="smalllogo">
         </div>
-        <ul class="nav-links">
-            <li><a href="{{ url('/') }}">Home</a></li>
-            <li><a href="{{ url('/pizzas') }}">Pizzas</a></li>
-            <!-- Add more nav links as needed -->
-        </ul>
-        <div class="auth-links">
+        <nav class=right>
+            <div class="homemenu">
+            <a  href="{{ url('/') }}">Home</a>
+            <a  href="{{ url('/') }}" >Menu</a>
+            </div>
+                    <div class="auth-links">
             @if (Route::has('login'))
                 <div class="auth">
                     @auth
@@ -36,12 +38,45 @@
                     @endauth
                 </div>
             @endif
-        </div>
-    </div>
-</nav>
-<body>
-    
+            </div>
+        </nav>
+    </header>
 {{$slot}}
 
 </body>
+
+<section class="spacer">
+    <img src="/images/flamepizzalogo.png" alt="" class="smalllogo">
+</section>
+
+<footer class="footer">
+    <div class="content">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>123 Main St, City</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@dragonfirepizza.com</p>
+            </div>
+            <div class="social-icons">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Order Online</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2024 Dragon Fire Pizza. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
 </html>

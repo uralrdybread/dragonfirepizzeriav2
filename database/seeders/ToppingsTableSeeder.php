@@ -16,8 +16,25 @@ class ToppingsTableSeeder extends Seeder
             $toppings = [
             ['name' => 'Pepperoni'],
             ['name' => 'Mushrooms'],
+            ['name' => 'Sausage'],
             ['name' => 'Onions'],
-            ];
+            ['name' => 'Bacon'],
+            ['name' => 'Extra cheese'],
+            ['name' => 'Black olives'],
+            ['name' => 'Green peppers'],
+            ['name' => 'Pineapple'],
+            ['name' => 'Spinach'],
+            ['name' => 'Ham'],
+            ['name' => 'Jalapeños'],
+            ['name' => 'Tomatoes'],
+            ['name' => 'Chicken'],
+            ['name' => 'Anchovies'],
+            ['name' => 'Artichokes'],
+            ['name' => 'Feta cheese'],
+            ['name' => 'Salami'],
+            ['name' => 'Bell peppers'],
+            ['name' => 'Basil'],
+        ];
             DB::table('toppings')->insert($toppings);
     }
 }

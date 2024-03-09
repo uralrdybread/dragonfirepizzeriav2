@@ -1,12 +1,18 @@
 <x-layout>
 
+<div class="pizza-container">
+
 @foreach ($pizzas as $pizza)
 
-<div>
-    {{$pizza->name}} - {{$pizza->type}} - {{$pizza->base}}
+<div class="pizza-card">
+    <h2>{{ $pizza->name }}</h2>
+    <p><strong>Type:</strong> {{ $pizza->type }}</p>
+    <p><strong>Base:</strong> {{ $pizza->base }}</p>
+    <p><a href="/pizzas/{{ $pizza->id }}">Details</a></p>
 </div>
-<h4><a href="/pizzas/{{ $pizza->id }}">{{ $pizza->name }}</a></h4>
 
 @endforeach
+
+</div>
 
 </x-layout>

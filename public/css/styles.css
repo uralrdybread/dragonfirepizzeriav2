@@ -1,63 +1,312 @@
 body {
-}
-
-img {
-    height: 25%;
-    width: 25%;
-}
-
-nav {
-    background-color: #333;
-    color: #fff;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-
-.logo a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5rem;
-}
-
-.nav-links ul {
-    list-style: none;
-    padding: 0;
+    font-family: "Roboto Slab", serif;
     margin: 0;
 }
 
-.nav-links ul li {
-    display: inline;
-    margin-right: 20px;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    font-size: 2rem;
 }
 
-.nav-links ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-.auth-links .auth {
+.navbar .right {
     display: flex;
     align-items: center;
 }
 
-.auth-links .auth a {
-    color: #fff;
+.navbar .right a {
     text-decoration: none;
-    margin-right: 10px;
+    color: black;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 2rem;
 }
 
-.auth-links .auth form button {
-    background-color: transparent;
+.navbar .right .homemenu a {
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar .right .homemenu a:hover {
+    color: #d15454;
+}
+
+.navbar .left {
+}
+
+.smalllogo {
+    width: 110px;
+    height: 110px;
+    margin: 0 0 0 15px;
+}
+/* 
+Welcome page CSS */
+
+.welcome {
+    background-image: url("/images/0_3.webp");
+    background-size: cover; /* Scale the background image to cover the entire container */
+    background-position: center; /* Center the background image */
+    height: 70vh; /* Adjust the height of the section as needed (70% of the viewport height in this example) */
+    /* Additional styling for the welcome back section */
+}
+
+.createpizza a {
+    text-decoration: none;
+    color: black;
+    background-color: #d15454; /* Red background color */
+    color: #fff; /* White text color */
+    border: solid white; /* Remove border */
+    border-radius: 25px; /* Rounded corners */
+    padding: 10px 20px; /* Adjust padding as needed */
+    margin-right: 10px; /* Add margin between buttons */
+    transition: color 0.3s;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    display: inline-block;
+}
+
+.createpizza a:hover {
+    color: black;
+}
+
+.createpizza {
+    position: absolute;
+    top: 50%; /* Place the top of the element at the middle of the section */
+    left: 1%; /* Adjust the left position as needed */
+    transform: translateY(-50%); /* Adjust to center the element vertically */
+    text-align: center; /* Center the text horizontally */
+    background-color: rgba(0, 0, 0, 0.5);
+    border: solid black;
+    border-radius: 25%;
+    padding: 1rem;
+}
+
+.createpizza .slogan {
+    font-size: 20px;
+    color: white;
+}
+
+.createpizza .slogan span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* form entry */
+
+.form-container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.pizza-form {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border: solid black;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+fieldset {
     border: none;
-    color: #fff;
-    cursor: pointer;
+    margin: 0;
     padding: 0;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.btn-submit {
+    background-color: #d15454; /* Red background color */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 25px; /* Rounded corners */
+    padding: 10px 20px; /* Adjust padding as needed */
+    margin-right: 10px; /* Add margin between buttons */
+    transition: color 0.3s; /* Smooth transition for text color change */
+}
+
+.btn-submit:hover {
+    color: black;
+}
+
+.form-group.toppings fieldset {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-group.toppings label {
+    display: inline-block;
+    margin-right: 10px; /* Adjust margin as needed */
+    margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+.form-group.toppings input[type="checkbox"] {
+    display: inline-block;
+    margin-right: 5px; /* Adjust margin as needed */
+}
+
+/* show all pizza's page */
+
+.pizza-container {
+    max-width: 600px; /* Adjust maximum width as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+}
+
+.pizza-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.pizza-card h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.pizza-card p {
+    margin-bottom: 5px;
+}
+
+.pizza-card a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.pizza-card a:hover {
+    text-decoration: underline;
+}
+
+/* individual pizza view */
+
+.pizza-details {
+    max-width: 600px; /* Adjust maximum width as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.pizza-details h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.pizza-details p {
+    margin-bottom: 5px;
+}
+
+.pizza-details ul {
+    margin-bottom: 10px;
+}
+
+.pizza-details li {
+    list-style-type: none;
+}
+
+.delete-form {
+    margin-top: 20px;
+}
+
+.btn-complete {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-complete:hover {
+    background-color: #0056b3;
+}
+
+.back-link {
+    display: block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Styles for the dashboard, logout, and login buttons */
+
+.auth-links .auth {
+    display: flex; /* Use flexbox to align items in a row */
+    align-items: center; /* Align items vertically in the center */
+}
+
+.auth-links .auth a,
+.auth-links .auth form button {
+    background-color: #d15454; /* Red background color */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 25px; /* Rounded corners */
+    padding: 10px 20px; /* Adjust padding as needed */
+    margin-right: 10px; /* Add margin between buttons */
+    transition: color 0.3s; /* Smooth transition for text color change */
+}
+
+.auth-links .auth a {
+    text-decoration: none; /* Remove underline */
+}
+
+.auth-links .auth a:hover,
+.auth-links .auth form button:hover {
+    color: #000; /* Black text color on hover */
+}
+
+/* footer CSS */
+
+.footer {
+    background-image: url("/images/pizzahero74.png"); /* Replace 'your-image.jpg' with the path to your background image */
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0; /* Adjust padding as needed */
+    text-align: center;
+    color: white; /* Text color for content over the background image */
+}
+
+.footer .content {
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.5
+    ); /* Adjust the last value (alpha) to control the darkness of the overlay */
+    padding: 20px; /* Adjust padding as needed */
+}
+
+.footer-links li {
+    list-style-type: none;
+}
+
+section.spacer {
+    padding: 30px;
+    background-color: #d15454;
+    margin: 10px 0;
 }
