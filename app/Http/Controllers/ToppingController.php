@@ -30,7 +30,7 @@ class ToppingController extends Controller
         // Add more attributes as needed
         $topping->save();
 
-        // Redirect to a success page or back to the form
+        return redirect('/toppings');
     }
 
     // Method to show the form for editing a topping
@@ -59,6 +59,6 @@ class ToppingController extends Controller
         $topping = Topping::findOrFail($id);
         $topping->delete();
 
-        // Redirect to a success page or back to the list of toppings
+        return redirect('/toppings');
     }
 }

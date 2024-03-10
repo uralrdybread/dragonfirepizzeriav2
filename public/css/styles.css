@@ -40,6 +40,12 @@ body {
     height: 110px;
     margin: 0 0 0 15px;
 }
+
+.logout-btn {
+    font-size: 2rem;
+    font-family: "Roboto Slab", serif;
+}
+
 /* 
 Welcome page CSS */
 
@@ -278,6 +284,77 @@ legend {
 .auth-links .auth a:hover,
 .auth-links .auth form button:hover {
     color: #000; /* Black text color on hover */
+}
+
+/* Pizza Menu */
+
+.menu-container {
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add padding for spacing */
+    font-size: 15px;
+    viewhei
+}
+
+.menu-item {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.menu-item h2 {
+    margin-top: 0;
+}
+
+.ingredients {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Edit Toppings CSS */
+
+.topping-container {
+    display: flex;
+}
+
+.topping-container .add-topping button,
+.topping-container .topping-list button {
+    background-color: #d15454; /* Red background color */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 25px; /* Rounded corners */
+    padding: 10px 20px; /* Adjust padding as needed */
+    margin-right: 10px; /* Add margin between buttons */
+    transition: color 0.3s; /* Smooth transition for text color change */
+    cursor: pointer;
+}
+
+.topping-container .add-topping button:hover,
+.topping-container .topping-list button:hover {
+    color: black;
+}
+
+.add-topping,
+.topping-list {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid black;
+    margin: 10px 10px;
+}
+
+.add-topping {
+    margin-right: 10px;
+}
+
+.topping-list ul {
+    max-width: 300px; /* Adjust the maximum width as needed */
+    margin: 0;
+    padding: 0;
+}
+
+.topping-list li {
+    display: inline-block;
+    margin-right: 10px; /* Adjust the margin between list items */
 }
 
 /* footer CSS */

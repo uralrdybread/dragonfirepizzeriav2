@@ -12,12 +12,14 @@
 </head>
 <body>
     <header class="navbar">
-        <div class="left"><img src="\images\flamepizzalogo.png" class="smalllogo">
+        <a href="{{ url('/') }}">
+            <img src="\images\flamepizzalogo.png" class="smalllogo" alt="Flame Pizza Logo">
+        </a>
         </div>
         <nav class=right>
             <div class="homemenu">
             <a  href="{{ url('/') }}">Home</a>
-            <a  href="{{ url('/') }}" >Menu</a>
+            <a  href="{{ url('/pizzas/menu') }}" >Menu</a>
             </div>
                     <div class="auth-links">
             @if (Route::has('login'))
@@ -27,7 +29,7 @@
                         <a href="{{ url('/dashboard') }}">Dashboard</a>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <button type="submit">Logout</button>
+                            <button type="submit" class="logout-btn">Logout</button>
                         </form>
                     @else
                         <!-- User is not logged in -->

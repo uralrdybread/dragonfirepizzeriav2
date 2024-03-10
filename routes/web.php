@@ -22,14 +22,17 @@ Route::get('/', function () {
 });
 
 
+
 // need to figure out why resource isn't working some of these
+Route::get('/pizzas/menu', [PizzaController::class, 'menu']);
 Route::delete('/pizzas/{id}', [PizzaController::class, 'destroy']);
 Route::post('/pizzas', [PizzaController::class, 'store']);
 Route::get('pizzas/create', [PizzaController::class, 'create']);
 Route::resource('pizzas', PizzaController::class)->only(['index', 'show'])->middleware('admin');
 
+
 // toppings controller
-Route::get('/toppings', [ToppingController::class, 'index']);
+Route::resource('/toppings', ToppingController::class)->middleware('admin');
 
 // Dashboard route (requires authentication and email verification)
 Route::get('/dashboard', function () {
