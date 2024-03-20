@@ -1,3 +1,34 @@
+# DragonFire Pizza v2
+
+a modern, feature-rich pizza ordering and management system built on the Laravel framework. This project aims to deliver a seamless pizza ordering experience for customers while providing robust administration tools for managing toppings, menus, and user permissions.
+
+## Project Goals
+
+- **Toppings Management**: Implement a flexible toppings table allowing seamless association with pre-made pizzas, providing administrators the ability to manage toppings availability based on season and preference.
+
+- **User-Friendly Administration**: Design an intuitive administration interface empowering admins to effortlessly control topping selections available to customers, ensuring a delightful ordering experience.
+
+- **Simplified User Assignment**: Utilize ENUM for streamlined assignment of user roles, making the management process straightforward and efficient.
+
+- **Database Population with Seeders**: Employ Laravel seeders to populate the database with a comprehensive list of toppings, expediting the setup process for new installations.
+
+- **Authentication with Laravel Breeze**: Leverage Laravel Breeze to gain hands-on experience with authentication mechanisms, enhancing security and user management capabilities.
+
+- **Enhanced Routing with Laravel**: Explore routing features using authentication and the resource keyword, facilitating the implementation of basic CRUD (Create, Read, Update, Delete) operations.
+
+- **AI-Driven Design**: Craft the pizzeria website based on AI-generated mockups, harnessing artificial intelligence to streamline navigation and color selection, ensuring an aesthetically pleasing user experience.
+
+
+![admindashboard](https://github.com/uralrdybread/dragonfirepizzeriav2/assets/48900828/cca6fe73-d59e-46b1-87aa-4fe4afa2b1b8)
+![footer](https://github.com/uralrdybread/dragonfirepizzeriav2/assets/48900828/9fa280e6-7c15-42d5-82bc-92539e6922c2)
+![meatpopsicle_website_mockup_ui_design_for_pizzeria_website _inc_99058852-e38b-47cc-9b58-a3e0c54a7de4](https://github.com/uralrdybread/dragonfirepizzeriav2/assets/48900828/61bd4b18-25ec-475c-8c59-6c22a63c175d)
+![orderconfirm](https://github.com/uralrdybread/dragonfirepizzeriav2/assets/48900828/5fa82521-3afe-4fb1-8361-ac0b9346497f)
+![pizzacreation](https://github.com/uralrdybread/dragonfirepizzeriav2/assets/48900828/686e9dc2-0952-4455-ab9b-60dd038629e4)
+![pizzaorderview](https://github.com/uralrdybread/dragonfirepizzeriav2/assets/48900828/fe0b02fa-2069-4d83-869f-32bab0c94d27)
+![toppings](https://github.com/uralrdybread/dragonfirepizzeriav2/assets/48900828/89859f7c-cd41-4ca9-b3f0-1bd0699027cd)
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
