@@ -6,6 +6,8 @@ a modern, feature-rich pizza ordering and management system built on the Laravel
 
 - **Toppings Management**: Implement a flexible toppings table allowing seamless association with pre-made pizzas, providing administrators the ability to manage toppings availability based on season and preference.
 
+- **Implement Many to Many pivot table**: Create a pivot table that connects two other tables such as "pizza" and "toppings".
+
 - **User-Friendly Administration**: Design an intuitive administration interface empowering admins to effortlessly control topping selections available to customers, ensuring a delightful ordering experience.
 
 - **Simplified User Assignment**: Utilize ENUM for streamlined assignment of user roles, making the management process straightforward and efficient.
